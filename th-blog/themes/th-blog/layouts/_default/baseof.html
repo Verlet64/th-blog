@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html class="vert-scroll border-box" lang="{{ $.Site.LanguageCode | default "en" }}">
+  <head>
+        <link href='{{ "css/index.css" | absURL }}' rel='stylesheet' type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Ledger" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body class="m0-auto fnt-ledger bg-off-white fnt-blk">    
+    {{ block "header" . }}{{ partial "header.html" .}}{{ end }}
+    <main class="m0-auto txt-center pl-10 pr-10">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+  </body>   
+</html>

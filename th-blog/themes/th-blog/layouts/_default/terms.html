@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main>
+    <ul class="inl-blck maxw-80pc center no-pt p0 mw-600 list-no-dec">
+        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+            <li class="list-no-dec">
+                <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="fnt-30 fnt-italic blk text-no-dec"
+                    >{{ $name }}
+                </a>
+            </li>
+        {{ end }}
+    </ul>
+</main>
+{{ end }}

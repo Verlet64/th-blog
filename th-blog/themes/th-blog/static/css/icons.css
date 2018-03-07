@@ -1,0 +1,19 @@
+.home-icon  {
+    background: url(../images/house_icon.svg) no-repeat;
+    background-position: center;
+}
+
+.posts-icon {
+    background: url(../images/posts_logo.svg) no-repeat;
+    background-position: center;
+}
+
+.contact-logo {
+    background: url(../images/contact_logo.svg) no-repeat;
+    background-position: center;
+}
+
+.about-logo {
+    background: url(../images/about_icon.svg) no-repeat;
+    background-position: center;
+}

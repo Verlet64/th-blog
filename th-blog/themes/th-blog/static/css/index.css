@@ -1,0 +1,210 @@
+.inl-blck {
+    display: inline-block;
+}
+
+.maxw-80pc {
+    max-width: 80%;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.no-pt {
+    list-style-type: none;
+}
+
+.p0 {
+    padding: 0;
+}
+
+.mw-600 {
+    max-width: 600px;
+}
+
+/* Element Dimensions */
+
+.h40 {
+    height: 40px;
+}
+
+.h30 {
+    height: 30px;
+}
+
+.w40 {
+    width: 40px;
+}
+
+.w100pc {
+    width: 100%;
+}
+
+/* List Styling */
+
+.list-no-dec {
+    list-style: none;
+}
+
+/* Font Styling */
+
+.fnt-italic {
+    font-style: italic;
+}
+
+.fnt-30 {
+    font-size: 30px;
+}
+
+.fnt-blk {
+    color: #444444;
+}
+
+.txt-justify {
+    text-align: justify;
+}
+
+/* Background Styling */
+
+.bg-off-white {
+    background-color: #fffff8;
+}
+
+.bg-center {
+    background-position: center;
+}
+
+.bg-s40 {
+    background-size: 40px;
+}
+
+/* Icons */
+
+.home-icon  {
+    background-image: url(../images/house_icon.svg);
+}
+
+.posts-icon {
+    background-image: url(../images/posts_logo.svg);
+}
+
+.contact-logo {
+    background-image: url(../images/contact_logo.svg);
+}
+
+.about-logo {
+    background-image: url(../images/about_icon.svg);
+}
+
+.eye-icon {
+    background-image: url(../images/eye_icon.svg);
+}
+
+/* Margins */
+
+.m0-auto {
+    margin: 0 auto;
+}
+
+.ml-5 {
+    margin-left: 5px;    
+}
+
+.mr-5 {
+    margin-right: 5px;    
+}
+    
+/* Floats */
+
+.float-right {
+    float: right;
+}
+
+/* Display */
+
+.flex {
+    display: flex;
+}
+
+.inl-blck {
+    display: inline-block;
+}
+
+/* Box Sizing */
+
+.border-box {
+    box-sizing: border-box;
+}
+
+/* Fonts */
+
+.fnt-ledger {
+    font-family: ledger;
+}
+
+.no-text-dec {
+    text-decoration: none;
+}
+
+.blk {
+    color: black;
+}
+
+/* Alignments */
+
+.center-align {
+    align-items: center;
+}
+
+.justify-flex {
+    justify-content: space-around;
+}
+
+/* Text Alignments */
+
+.txt-center {
+    text-align: center;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Overflow */
+
+.vert-scroll {
+    overflow-y: scroll;
+}
+
+/* Padding */
+
+.pt-5 {
+    padding-top: 5px;
+}
+
+.pb-5 {
+    padding-bottom: 5px;
+}
+
+.pr-10 {
+    padding-right: 10px;
+}
+
+.pl-10 {
+    padding-left: 10px;
+}
+
+/* Cursors */
+
+.ptr {
+    cursor: pointer;
+}
+
+/* Borders */
+
+.btm-blk {
+    border-bottom: 2px solid black;
+}

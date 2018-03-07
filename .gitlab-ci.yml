@@ -1,0 +1,58 @@
+variables:
+  ARTIFACT_BUCKET_NAME: "blog-tawhidhannan-artifacts"
+  RELEASE_BUCKET_NAME: "blog.tawhidhannan.co.uk"
+
+stages:
+  - build
+  - store-build-artifact
+  - prepare-infrastructure
+  - deploy
+  - renew-ssl
+build:
+  image: thannan/hugo
+  stage: build
+  only: 
+    - master
+  except:
+    - schedules
+  script: 
+    - ./build.sh
+  artifacts: 
+    paths:
+    - blog.tar.gz
+    expire_in: 1 week
+store-build-artifact:
+  image: python:latest
+  stage: store-build-artifact
+  only: 
+    - master
+  except:
+    - schedules
+  dependencies: 
+    - build
+  script: 
+    - pip install awscli
+    - aws s3 cp blog.tar.gz s3://$ARTIFACT_BUCKET_NAME/ 
+prepare-infrastructure:
+  image: thannan/terragrunt
+  stage: prepare-infrastructure
+  only: 
+    - master
+  except:
+    - schedules
+  script:
+    - cd ./infrastructure/
+    - ./stand-up.sh
+deploy:
+  image: python:latest
+  stage: deploy
+  except:
+    - schedules
+  only: 
+    - master
+  dependencies: 
+    - build
+  script: 
+    - pip install awscli
+    - tar -xzf blog.tar.gz -C ./
+    - aws s3 sync _site s3://$RELEASE_BUCKET_NAME/ --acl="public-read"

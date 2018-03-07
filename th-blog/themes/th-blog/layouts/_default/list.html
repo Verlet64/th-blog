@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+    <article class="mw-600 txt-justify m0-auto fnt-ledger fnt-blk">
+        <header>
+            <h1 class="fnt-30 txt-center fnt-italic">{{.Title}}</h1>
+        </header>
+        {{.Content}}
+    </article>
+    <ul class="inl-blck maxw-80pc center no-pt p0 mw-600 list-no-dec">
+        {{ range .Data.Pages.ByDate }}
+            <li>
+                <a href="{{ .URL }}" class="no-text-dec">
+                    <h3 class="fnt-italic fnt-blk">{{ .Title }}</h2>
+                </a>
+            </li>
+        {{ end }}
+    </ul>
+</main>
+{{ end }}

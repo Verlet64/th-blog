@@ -1,0 +1,10 @@
+th-blog/_site
+th-blog/_cache
+th-blog/.stack-work
+th-blog/_build
+**/*.terraform
+**/*.tfstate.backup
+*.org
+**/*.org
+*.md
+**/.md

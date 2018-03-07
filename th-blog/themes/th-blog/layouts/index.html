@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <ul class="inl-blck maxw-80pc center no-pt p0 mw-600 list-no-dec">
+    {{ range sort ((where .Data.Pages "Params.type" "!=" "misc") "date" "asc") }}
+      <li>
+        <a href="{{ .URL }}" class="no-text-dec">
+          <h2 class="fnt-30 fnt-italic fnt-blk txt-center">{{ .Title }}</h2>
+        </a>
+        <div class="txt-justify">
+            {{ .Summary }}
+        </div>
+        <a href="{{ .URL }}" class="eye-icon h40 w40 bg-s40 inl-blck"></a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

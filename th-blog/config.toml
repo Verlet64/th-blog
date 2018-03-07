@@ -1,0 +1,5 @@
+baseURL = "https://blog.tawhidhannan.co.uk/"
+languageName = "English"
+languageCode = "en-gb"
+title = "Blogging With Scissors"
+theme = "th-blog"
